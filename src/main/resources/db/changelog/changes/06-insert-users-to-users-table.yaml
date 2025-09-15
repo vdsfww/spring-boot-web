@@ -1,0 +1,47 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert_users_to_users_table
+      author: root
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: 'alice.green@example.com'
+              - column:
+                  name: password
+                  value: '$2a$10$Vt2Z3qUBy5sKj8IUmzLgZBWeCxKhVjZ3qdzU88MQwHqSt31jvR1F2'
+              - column:
+                  name: first_name
+                  value: 'Alice'
+              - column:
+                  name: last_name
+                  value: 'Green'
+              - column:
+                  name: shipping_address
+                  value: '321 Maple St, City, Province'
+              - column:
+                  name: is_deleted
+                  valueBoolean: false
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: 'john.doe@example.com'
+              - column:
+                  name: password
+                  value: '$2a$10$T1Xfl3Jf5DT5lgNp8Ym1q.zl7ttAkggTwtiMGYfGoU3uFQ7n5QdCC'
+              - column:
+                  name: first_name
+                  value: 'John'
+              - column:
+                  name: last_name
+                  value: 'Doe'
+              - column:
+                  name: shipping_address
+                  value: '101 Oak St, Suburb, County'
+              - column:
+                  name: is_deleted
+                  valueBoolean: false
